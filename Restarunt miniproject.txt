@@ -1,0 +1,148 @@
+import java.util.Scanner;
+
+class About
+{
+    String name;
+    String adrs;
+}
+
+public class RestaurantMenu 
+{
+    public static void main(String[] args) 
+    {
+        Scanner scanner = new Scanner(System.in);
+        About[] customers = new About[10];
+        int i = 1, num, a, b, n, y, k, l, price[] = new int[100], gst[] = new int[100],
+                total[] = new int[100], quant[] = new int[100], grandTotal = 0;
+        String ch[][] = new String[20][30];
+
+        System.out.println("\n ____ Menu Card _______\n\n");
+        System.out.println("\n 1) All Cold-drinks (200ml) - 25rs\n\n 2) Pizza - 200rs 9) Burger - 100rs\n\n" +
+                " 3) Sandwich - 60rs 10) Chicken 65 - 60rs \n\n 4) Pasta - 40rs 11) Noodles - 60rs\n\n" +
+                " 5) Misal pav - 50rs 12) Pav Bhaji - 85rs\n\n 6) Chicken Rice - 80rs 13) Soup - 45rs\n\n" +
+                " 7) Samosa - 30rs 14) Dosa - 60rs\n\n 8) Salad - 50rs 15) Paneer Masala -120rs\n ");
+
+        System.out.println("\n +++++++++++++++++++++++++++++++++++++++++++" +
+                "++++++++++++++++++++++++++++++++++\n");
+        System.out.println("\n CUSTOMER INFORMATION :\n ");
+
+        customers[1] = new About();
+
+        System.out.print("\n Customer Name: ");
+        customers[1].name = scanner.next();
+        System.out.print("\n Customer Address: ");
+        customers[1].adrs = scanner.next();
+        System.out.println("\n *************************** \n\n");
+        System.out.print("Enter the no. of Items you've ordered: ");
+        l = scanner.nextInt();
+
+        for (k = 0; k < l; k++) 
+        {
+            System.out.print("\nEnter the Lot no. of the Dish: ");
+            n = scanner.nextInt();
+            switch (n) 
+            {
+                case 1:
+                    ch[k][0] = "All Cold-drinks (200ml)";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 25;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 2:
+                    ch[k][0] = "Pizza ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 200;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 3:
+                    ch[k][0] = "Sandwich ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 60;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 4:
+                    ch[k][0] = "Pasta ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 40;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 5:
+                    ch[k][0] = "Masal Pav ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 50;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 6:
+                    ch[k][0] = "Chicken Rice ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 80;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 7:
+                    ch[k][0] = "Samosa ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 30;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 8:
+                    ch[k][0] = "Salad ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 50;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 9:
+                    ch[k][0] = "Burger ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 100;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 10:
+                    ch[k][0] = "Chicken 65 ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 60;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+                    break;
+                case 11:
+                    ch[k][0] = "Noodles ";
+                    System.out.println("Your Dish: " + ch[k][0]);
+                    System.out.print("Enter the Quantity Ordered: ");
+                    quant[k] = scanner.nextInt();
+                    price[k] = 60;
+                    gst[k] = (price[k] / 100) * 18;
+                    total[k] = ((price[k] + gst[k]) * quant[k]);
+            }
+        }
+    }
+}
+                
+
